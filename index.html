@@ -9,15 +9,15 @@
 </head>
 <body>
     <div id="app">
-        <h1>Salut, {{name}}</h1>
+        <h1 v-show="isConnected">Salut, {{name}}</h1>
         <div v-if="isConnected" class="">
             <p>{{age}}</p>
             <p>{{bio}}</p>
         </div>
         <div class="">
             <div class="">
-                <button v-on:click ="connexion" v-if="!isConnected" >Connecter</button>
-                <button v-on:click ="deconnection" v-else >Deconnected</button>
+                <button v-on:click ="connexion" v-if="!isConnected" >Connect</button>
+                <button v-on:click ="deconnection" v-else >Deconnect</button>
             </div>
             <button v-on:click ="augmenterAge">+</button>
             <button v-on:click ="diminuerAge">-</button>
