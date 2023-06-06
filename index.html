@@ -9,13 +9,16 @@
 </head>
 <body>
     <div id="app">
-        <h1>Salut {{name}}</h1>
-        <div class="">
-            <h3>{{autheur}}</h3>
+        <h1>Salut, {{name}}</h1>
+        <div v-if="isConnected" class="">
             <p>{{age}}</p>
             <p>{{bio}}</p>
         </div>
         <div class="">
+            <div class="">
+                <button v-on:click ="connexion" v-if="!isConnected" >Connecter</button>
+                <button v-on:click ="deconnection" v-else >Deconnected</button>
+            </div>
             <button v-on:click ="augmenterAge">+</button>
             <button v-on:click ="diminuerAge">-</button>
         </div>

@@ -1,10 +1,11 @@
 const app = Vue.createApp({
     data(){
         return{
-            name: 'Muriel',
-            'autheur': 'TSIDIANY Raharison Muriel',
-            'age': 22,
-            'bio': 'ITDevSuccess'
+            name: 'Mr or Miss',
+            isConnected: false,
+            
+            age: 22,
+            bio: 'ITDevSuccess'
         }
     },
     methods: {
@@ -13,6 +14,14 @@ const app = Vue.createApp({
         },
         diminuerAge(){
             this.age--
+        },
+        connexion(){
+            this.name = 'Muriel'
+            this.isConnected  = true
+        },
+        deconnection(){
+            this.isConnected = false
+            this.name = 'Mr ou Miss'
         }
     }
 })
