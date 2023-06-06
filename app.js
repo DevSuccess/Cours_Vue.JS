@@ -1,27 +1,18 @@
 const app = Vue.createApp({
     data(){
         return{
-            name: 'Mr or Miss',
-            isConnected: false,
-            
-            age: 22,
-            bio: 'ITDevSuccess'
+           titre: 'Mon titre',
+           x: 0,
+           y: 0
         }
     },
     methods: {
-        augmenterAge(){
-            this.age++
+        HandleMouse(e){
+            console.log('Evenement Déclanche : '+e)
         },
-        diminuerAge(){
-            this.age--
-        },
-        connexion(){
-            this.name = 'Muriel'
-            this.isConnected  = true
-        },
-        deconnection(){
-            this.isConnected = false
-            this.name = 'Mr ou Miss'
+        DeplacementSouri(e){
+            this.x = e.offsetX
+            this.y = e.offsetY
         }
     }
 })

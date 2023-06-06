@@ -5,23 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue JS</title>
+    <style>
+        .box{
+            padding: 100px 0;
+            width: 400px;
+            background-color: #ddd;
+            margin: 20px;
+            text-align: center;
+            display: inline-block;
+        }
+    </style>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
     <div id="app">
-        <h1 v-show="isConnected">Salut, {{name}}</h1>
-        <div v-if="isConnected" class="">
-            <p>{{age}}</p>
-            <p>{{bio}}</p>
-        </div>
-        <div class="">
-            <div class="">
-                <button v-on:click ="connexion" v-if="!isConnected" >Connect</button>
-                <button v-on:click ="deconnection" v-else >Deconnect</button>
-            </div>
-            <button v-on:click ="augmenterAge">+</button>
-            <button v-on:click ="diminuerAge">-</button>
-        </div>
+        <h1>{{titre}}</h1>
+        <div class="box" @mouseover="HandleMouse">Mouse Over</div>
+        <div class="box" @mouseleave="HandleMouse">Mouse Leave</div>
+        <div class="box" @dblclick="HandleMouse">Mouse Double Click</div>
+        <div class="box" @mousemove="DeplacementSouri($event)">X: {{x}} Y: {{y}}</div>
     </div>
     <script src="app.js"></script>
 </body>
