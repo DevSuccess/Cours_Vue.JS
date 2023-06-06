@@ -10,6 +10,15 @@
 <body>
     <div id="app">
         <h1>Salut {{name}}</h1>
+        <div class="">
+            <h3>{{autheur}}</h3>
+            <p>{{age}}</p>
+            <p>{{bio}}</p>
+        </div>
+        <div class="">
+            <button v-on:click ="augmenterAge">+</button>
+            <button v-on:click ="diminuerAge">-</button>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
