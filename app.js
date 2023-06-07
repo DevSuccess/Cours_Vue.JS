@@ -8,16 +8,16 @@ const app = Vue.createApp({
                 {
                     name: 'Muriel',
                     age: 22, 
-                    url: 'http://site_muriel.com'
+                    url: 'http://site_muriel.com',
+                    image: 'assets/image1.png',
+                    isPro: true
                 },{
                     name: 'Fatima',
                     age: 21,
-                    url: 'http://site_fatima.com'
-                },{
-                    name: 'BB',
-                    age: 0,
-                    url: 'http://site.com'
-                },
+                    url: 'http://site_fatima.com',
+                    image: 'assets/image2.png',
+                    isPro: false
+                }
             ]
         }
     },

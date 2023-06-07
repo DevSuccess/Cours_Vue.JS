@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue JS</title>
     <style>
-        .box{
-            padding: 100px 0;
-            width: 400px;
-            background-color: #ddd;
-            margin: 20px;
-            text-align: center;
-            display: inline-block;
+        .card{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: aquamarine;
+            margin-bottom: 10px;
+        }
+        .pro{
+            background-color: rebeccapurple;
+            color: #fff;
         }
     </style>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -20,10 +23,13 @@
 <body>
     <div id="app">
         <h1>{{titre}}</h1>
-        <div class="box" v-for="user in users">
-            <div>{{user.name}}</div>
-            <p>Age: {{user.age}}</p>
-            <i><a :href="user.url">Site Web</a></i>
+        <div class="card" v-for="user in users" :class="{pro: user.isPro}">
+            <img width="80" :src="user.image" :alt="user.name">
+            <div class="">
+                <h3>{{user.name}}</h3>
+                <p>Age: {{user.age}}</p>
+                <i><a :href="user.url" target="_blank">Site Web</a></i>
+            </div>
         </div>
     
     </div>
